@@ -1,0 +1,13 @@
+Student Performance Prediction - Mini Project Report
+
+Dataset used: I used a sample student performance dataset with 200 student records. It was prepared for practice purposes. The columns are Study Hours, Attendance, Previous Marks, Assignment Score and the final Result (Pass or Fail). Some values were missing in the four feature columns, so I filled them with the column mean.
+
+Features selected: Study Hours, Attendance, Previous Marks and Assignment Score were used as input features (X). The Result column was used as the target (y) after converting it to numbers (Fail = 0, Pass = 1). Student ID was not used because it is only an identifier.
+
+Model used: I trained a Logistic Regression classifier from Scikit-learn. The data was split 80% for training and 20% for testing, and the features were scaled using StandardScaler.
+
+Results obtained and accuracy: The model reached an accuracy of 85% on the test data (34 out of 40 students predicted correctly). It was tested with four new students. A student with 6 study hours, 85% attendance and 72 previous marks was predicted PASS, while a student with 1.5 study hours and 50% attendance was predicted FAIL.
+
+Limitations: The dataset is small, so the accuracy can change with a different split. Only four features were used, and things like health, family support or teaching quality are not included. I also tested on just one split, so the result may not be fully reliable.
+
+Future improvements: I would use a bigger real dataset, try other models like Decision Tree and Random Forest and compare them, use cross-validation for a more reliable accuracy, and add more features. I would also look at precision and recall, not only accuracy.
